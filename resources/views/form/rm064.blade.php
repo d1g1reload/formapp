@@ -26,7 +26,7 @@
     <div class="container">
         <div class="row mt-4">
             <div class="col-md-4">
-                <a href="http://formapp.test/" class="btn btn-outline-dark">Kembali</a>
+                <a href="{{ url('/') }}" class="btn btn-outline-dark">Kembali</a>
             </div>
         </div>
         <div class="row mt-4">
