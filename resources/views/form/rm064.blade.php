@@ -18,7 +18,25 @@
         table.no-border td {
             border: none !important;
         }
-    </style>
+
+        /* Media Cetak */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .container,
+            .container-fluid {
+                width: 100%;
+                padding: 0;
+            }
+
+            label#tgl {
+                color: red;
+            }
+
+        }
     </style>
 </head>
 
@@ -30,7 +48,7 @@
             </div>
         </div>
         <div class="row mt-4">
-            <div class="col-md-6">
+            <div class="col-xs-6 col-sm-6 col-md-6">
                 <div class="media">
                     <img src="https://placehold.co/100x100" class="mr-3" alt="...">
                     <div class="media-body">
@@ -43,12 +61,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-xs-6 col-sm-6 col-md-6">
                 <div class="mt-0">
                     <table class="table no-border">
                         <tr>
-                            <td>Nama Pasien</td>
-                            <td>:</td>
+                            <td width="150px">Nama Pasien</td>
+                            <td width="10px">:</td>
                             <td>
                                 <input type="text" class="form-control" name="nama_pasien" id="nama_pasien">
                             </td>
@@ -82,12 +100,12 @@
         </div>
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-xs-6 col-sm-6 col-md-6">
                 <div class="mt-0">
                     <table class="table no-border">
                         <tr>
-                            <td>Nama DPJP</td>
-                            <td>:</td>
+                            <td width="110px">Nama DPJP</td>
+                            <td width="10px">:</td>
                             <td>
                                 <input type="text" class="form-control" name="nama_dpjp" id="nama_dpjp">
                             </td>
@@ -105,12 +123,12 @@
                     </table>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-xs-6 col-sm-6 col-md-6">
                 <div class="mt-0">
                     <table class="table no-border">
                         <tr>
-                            <td>Nama Tindakan Operasi</td>
-                            <td>:</td>
+                            <td width="190px">Nama Tindakan Operasi</td>
+                            <td width="5px">:</td>
                             <td>
                                 <input type="text" class="form-control" name="nama_tindakan_operasi"
                                     id="nama_tindakan_operasi">
@@ -133,7 +151,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-xs-6 col-sm-6 col-md-6">
                 <div class="mt-0">
                     <p>PEMERIKSAAN TANDA VITAL :</p>
                     <table class="table no-border">
@@ -190,7 +208,7 @@
                     </table>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-xs-6 col-sm-6 col-md-6">
                 <div class="mt-5">
                     <table class="table no-border">
                         <tr>
@@ -459,7 +477,303 @@
             </div>
 
         </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <p>PEMERIKSAAN YANG SUDAH DILAKUKAN </p>
+                <div class="mt-0">
+                    <table class="table no-border">
+                        <tr>
+                            <td>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Hb
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Ht
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Leukosit
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Trombosit
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                BS
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Elektrolit
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                GDA
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                SGOT
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                SGPT
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Lain-lain
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                EKG
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Thorax Foto
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Lain-lain
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <label for="">INSTRUKSI LAIN :</label>
+                                        <textarea name="" class="form-control" id="" cols="10" rows="5"></textarea>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="mt-0">
+                    <table class="table no-border">
+                        <tr>
+                            <td>Assessment</td>
+                            <td>:</td>
+                            <td>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Setuju</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">Tidak Setuju</label>
+                                </div>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Rencana Anestesi </td>
+                            <td>:</td>
+                            <td>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                        value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">Umum</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                        value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">Regional</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                        value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">Nerve Blok</label>
+                                </div>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="1"
+                                        id="riwayat_alergi_yes_cb" name="riwayat_alergi_yes_cb">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <label class="form-check-label">
+                                                Regional,Jenis
+                                            </label>
+                                        </div>
+                                        <div class="col-6">
+
+                                            <input type="text" class="form-control" name="riwayat_alergi">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="1"
+                                        id="riwayat_alergi_yes_cb" name="riwayat_alergi_yes_cb">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <label class="form-check-label">
+                                                Puasa
+                                            </label>
+                                        </div>
+                                        <div class="col-6">
+
+                                            <input type="text" class="form-control" name="riwayat_alergi">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="1"
+                                        id="riwayat_alergi_yes_cb" name="riwayat_alergi_yes_cb">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <label class="form-check-label">
+                                                Kebutuhan Darah
+                                            </label>
+                                        </div>
+                                        <div class="col-6">
+
+                                            <input type="text" class="form-control" name="riwayat_alergi">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="1"
+                                        id="riwayat_alergi_yes_cb" name="riwayat_alergi_yes_cb">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <label class="form-check-label">
+                                                Kebutuhan Ruang ICU
+                                            </label>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                                    value="option1">
+                                                <label class="form-check-label" for="inlineCheckbox1">Ya</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                                    value="option2">
+                                                <label class="form-check-label" for="inlineCheckbox2">Tidak</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-xs-7 col-sm-6 col-md-6">
+                <div class="form-group row">
+                    <label id="tgl" class="col-sm-7 col-form-label text-right">Tanggal
+                        Pemeriksaan</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control datepicker">
+                    </div>
+                </div>
+
+                <p class="text-right">
+                    Dokter Anestesi
+                </p>
+                <p class="mt-5 text-right">
+                    (..........................)
+                </p>
+            </div>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
