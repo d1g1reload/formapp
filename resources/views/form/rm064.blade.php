@@ -367,7 +367,7 @@
                 <div class="mt-0">
                     <table class="table no-border">
                         <tr>
-                            <td>Paru / Jalan Nafas</td>
+                            <td width="150px;">Paru / Jalan Nafas</td>
                             <td>:</td>
                             <td>
                                 <input type="text" class="form-control" name="paru_jalan_nafas"
