@@ -19,3 +19,9 @@ Route::get('/', function () {
 });
 
 Route::get('rm064', [FormController::class, 'formRm064'])->name('form.trial');
+Route::get('rm071', [FormController::class, 'formRm071'])->name('form.071');
+Route::get('rm072', [FormController::class, 'formRm072'])->name('form.072');
+Route::get('rm073', [FormController::class, 'formRm073'])->name('form.073');
+Route::get('rm074', [FormController::class, 'formRm074'])->name('form.074');
+Route::get('rm045a', [FormController::class, 'formRm045A'])->name('form.045a');
+Route::get('formTwoPage', [FormController::class, 'formTwoPage'])->name('form.2');

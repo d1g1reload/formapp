@@ -1,0 +1,1054 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Checklist Keselamatan Operasi</title>
+
+    <link rel="stylesheet" type="text/css" href="http://localhost/rsijombang-lar/public/app-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="http://localhost/rsijombang-lar/public/app-assets/css/select2-bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost/rsijombang-lar/public/app-assets/css/select2.min.css" />
+
+    <style type="text/css">
+        #tabel_kop_identitas {
+            border-collapse: collapse;
+            font-size: 20px;
+        }
+
+        #logo {
+            width: 60%
+        }
+
+        .judul {
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        #judul1 {
+            font-weight: bold;
+            font-size:27px;
+            text-align: center;
+        }
+
+        #judul2 {
+            text-align: center;
+            margin-top:-20px;
+            font-size:26px;
+            font-weight: bold;
+            line-height:1.15;
+        }
+
+        #tabel_pj tr {
+            /* line-height: 3; */
+            margin: 0%;
+            font-size: 14px;
+        }
+
+        .tabel_bordered tr td {
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+
+        #data_diri_header tr td {
+            font-size: 16px;
+            vertical-align: top;
+        }
+
+        #data_diri_ttd tr td {
+            font-size: 20px;
+            vertical-align: top;
+        }
+
+        .autocomplete-suggestions {
+            border: 1px solid #999;
+            background: #FFF;
+            overflow: auto;
+            cursor: pointer;
+        }
+
+        .autocomplete-suggestion {
+            padding: 2px 5px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .autocomplete-selected {
+            background: #F0F0F0;
+        }
+
+        .autocomplete-suggestions strong {
+            font-weight: normal;
+            color: #3399FF;
+        }
+
+        .autocomplete-group {
+            padding: 2px 5px;
+        }
+
+        .autocomplete-group strong {
+            display: block;
+            border-bottom: 1px solid #000;
+        }
+
+        @media  print {
+            @page  {
+                size: legal;
+                margin: 0;
+            }
+
+            #tabel_kop_identitas {
+                border-collapse: collapse;
+                font-size: 15px;
+            }
+
+            #logo {
+                width: 40%;
+                margin: 0%;
+            }
+
+            .judul {
+                font-size: 14px;
+                font-weight: bold;
+                text-align: center;
+                margin: 0%;
+                padding-top: -10px;
+            }
+
+            #judul1 {
+                font-weight: bold;
+                font-size:18px;
+                text-align: center;
+                margin: 0%;
+            }
+
+            #judul2 {
+                text-align: center;
+                margin-top:-20px;
+                font-size:20px;
+                font-weight: bold;
+                line-height:1.15;
+                margin: 0%;
+            }
+
+            .radio-kelamin {
+                display: grid;
+                grid-template-columns: 75% 1fr;
+                grid-gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body style="padding: 20px;">
+    <div class="modal fade" id="modal_verifikasi" tabindex="-1" style="overflow-y: scroll;" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Verifikasi</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="form_verifikasi">
+                    <div class="modal-body">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="">Password</label>
+                                <input type="password" id="password" placeholder="Masukkan password anda" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-success" type="submit">Verifikasi</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="box_message_top">
+                            </div>
+    <div class="col-md-12" style="width: 25%; margin-left: 75%; border:1px solid;">
+        <p class="judul">
+            RM 02.2
+        </p>
+    </div>
+    <br>
+    <div style="border:1px solid;">
+        <form id="form_dokumen">
+            <input type="hidden" name="_token" value="Tg4FN7OgDJw9JTDVVAQul6lMqHl4VsdKe889H5bN">            <input type="hidden" name="password">
+            <input type="hidden" name="dokumen" value="409">
+            <div class="row" style="width:100%; margin-left: 0;">
+                <table style="width: 100%">
+                    <tr>
+                        <td style="width: 50%; border: 1px solid;">
+                            <table style="width: 100%">
+                                <tr>
+                                    <td style="width: 30%; text-align: right">
+                                        <img src="http://localhost/rsijombang-lar/public/filelogo/logo_rs.png" alt="" id="logo">
+                                    </td>
+                                    <td style="width: 70%">
+                                        <p id="judul1">RUMAH SAKIT ISLAM JOMBANG</p>
+                                        <p id="judul2">
+                                            <span style="font-weight: normal">Jl. Brigjen Kretarto 22 A<br>Telp : (0321) 860074 -
+                                                868972</span>
+                                            <br>Jombang
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 50%; border: 1px solid;">
+                            <table id="tabel_kop_identitas">
+                                <tr>
+                                    <td style="width: 40%;">Nama</td>
+                                    <td style="padding-left:10px; padding-right:10px"> :</td>
+                                    <td>SURINAH</td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 40%;">No Rekam Medis</td>
+                                    <td style="padding-left:10px; padding-right:10px"> :</td>
+                                    <td>114957</td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 40%;">Tgl Lahir / Umur</td>
+                                    <td style="padding-left:10px; padding-right:10px"> :</td>
+                                    <td>01-07-2017 / 7 Tahun 4 Bulan 25 Hari </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 40%;">Jenis Kelamin</td>
+                                    <td style="padding-left:10px; padding-right:10px"> :</td>
+                                    <td>Perempuan</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-lg-12" style="width: 100%; margin-left: 0; border:1px solid; padding:10px;">
+                <p class="judul">
+                    CHECKLIST KESELAMATAN OPERASI (SURGICAL SAFETY CHECKLIST)
+                    <br>INSTALASI GAWAT DARURAT
+                </p>
+            </div>
+
+            
+            <div class="col-lg-12" style="width: 100%; margin-left: 0; border:1px solid; padding:10px;">
+                <span style="padding-left: 20px; font-size: 14px">Operasi / Tindakan</span>
+                <input type="text" name="operasi" id="operasi"
+                    value="Usus Buntu"
+                    style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 80%">
+            </div>
+            <div class="col-lg-12" style="width: 100%; margin-left: 0; border:1px solid; padding:10px;">
+                <table id="tabel_pj" style="border-collapse: collapse; width: 100%;">
+                    <tr>
+                        <td style="padding-left: 20px;" colspan="4">
+                            <b><u><i>SIGN IN /</i> Sebelum pemberian anestesi</u></b>
+                            (pukul <input type="text" class="waktu_24" name="sign_in" id="sign_in"
+                                value="12:20"
+                                style="border: hidden; border-bottom: 1px dotted; font-size: 14px;">)
+                            <br>
+                            Diisi oleh dokter dan perawat
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%"></td>
+                        <td style="width: 40%">
+                        </td>
+                        <td style="width: 10%; text-align: center">
+                            <b>YA</b>
+                        </td>
+                        <td style="width: 10%; text-align: center">
+                            <b>TIDAK</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%">1.</td>
+                        <td style="width: 40%">
+                            a.    Verifikasi identitas pasien
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"                                 checked
+                                 value="1" name="prosedur[]">
+                        </td>
+                        <td class="text-center">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%"></td>
+                        <td style="width: 40%">
+                            b. Informed Consent
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"                                 checked
+                                 value="2" name="prosedur[]">
+                        </td>
+                        <td class="text-center">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%"></td>
+                        <td style="width: 40%">
+                            c. Prosedur operasi
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"                                 checked
+                                 value="3" name="prosedur[]">
+                        </td>
+                        <td class="text-center">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%">2.</td>
+                        <td style="width: 40%">
+                            Penandaan area operasi
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"
+                                 value="4" name="prosedur[]">
+                        </td>
+                        <td class="text-center">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%">3.</td>
+                        <td style="width: 40%">
+                            Apakah pasien mempunyai alergi?
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"                                 checked
+                                 value="5" name="prosedur[]">
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"
+                                 value="6" name="prosedur[]">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%"></td>
+                        <td style="width: 40%">
+                            <div class="row">
+                                <div class="col-auto">a. Obat </div>
+                                <div class="col">
+                                    <input type="text" name="alergi_obat" id="alergi_obat"
+                                        value="sad"
+                                        style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"
+                                 value="7" name="prosedur[]">
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"                                 checked
+                                 value="8" name="prosedur[]">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%"></td>
+                        <td style="width: 40%">
+                            <div class="row">
+                                <div class="col-auto">b. Makanan </div>
+                                <div class="col">
+                                    <input type="text" name="makanan" id="makanan"
+                                        value="asdwq"
+                                        style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"
+                                 value="9" name="prosedur[]">
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"                                 checked
+                                 value="10" name="prosedur[]">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%">4.</td>
+                        <td style="width: 40%">
+                             Apakah ada resiko perdarahan? (Bila ya, disiapkan
+                             <input type="text" name="resiko_pendarahan" id="resiko_pendarahan"
+                                value="dasd"
+                                style="border: hidden; border-bottom: 1px dotted; font-size: 14px;">
+                             )
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"                                 checked
+                                 value="11" name="prosedur[]">
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"
+                                 value="12" name="prosedur[]">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%">5.</td>
+                        <td style="width: 40%">
+                             Apakah foto rontgen yang diperlukan telah ditayangkan?
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"
+                                 value="13" name="prosedur[]">
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"                                 checked
+                                 value="14" name="prosedur[]">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <table class="tabel_bordered" style="width: 100%">
+                                <tr>
+                                    <td style="text-align: center"><b>KEGIATAN</b></td>
+                                    <td style="text-align: center"><b>PELAKSANA</b></td>
+                                    <td style="text-align: center"><b>TANDA TANGAN</b></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" style="text-align: center"><b><i>SIGN IN</i></b></td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                1. Dokter / Dokter Gigi
+                                            </div>
+                                            <div class="col">
+                                                <input type="text" name="dokter_pelaksana1" id="dokter_pelaksana1"
+                                                    value="dr. Eky Indyanty W. L,MMRS, Sp.PK."
+                                                    style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                                                <input type="text" name="ttd_dokter1" id="ttd_dokter1" hidden
+                                                    value="05254086989840cd89bf62777ae061e3_ttd2.png"
+                                                    style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="row text-center">
+                                            <div class="col-auto">
+                                                1.
+                                            </div>
+                                            <div class="col" id="box_ttd_dokter1">
+                                                                                                <img style="width: 1.5cm; height:1cm;" src="http://localhost/rsi_jombang/smis-upload/05254086989840cd89bf62777ae061e3_ttd2.png">
+                                                                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                2. Perawat
+                                            </div>
+                                            <div class="col">
+                                                <input type="text" name="perawat1" id="perawat1"
+                                                    value=""
+                                                    style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                                                <input type="text" name="ttd_perawat1" id="ttd_perawat1" hidden
+                                                    value=""
+                                                    style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="row text-center">
+                                            <div class="col-auto">
+                                                2.
+                                            </div>
+                                            <div class="col" id="box_ttd_perawat1">
+                                                                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding-left: 20px;" colspan="4">
+                            <b><u><i>TIMEOUT /</i> Sebelum tindakan</u></b>
+                            (pukul <input type="text" class="waktu_24" name="timeout" id="timeout"
+                                value=""
+                                style="border: hidden; border-bottom: 1px dotted; font-size: 14px;">)
+                            <br>
+                            Diisi oleh dokter dan perawat
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%"></td>
+                        <td style="width: 40%">
+                        </td>
+                        <td style="width: 10%; text-align: center">
+                            <b>YA</b>
+                        </td>
+                        <td style="width: 10%; text-align: center">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%">1.</td>
+                        <td style="width: 40%">
+                            Konfirmasi secara verbal
+                        </td>
+                        <td class="text-center">
+                        </td>
+                        <td class="text-center">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%"></td>
+                        <td style="width: 40%">
+                            - Nama Pasien
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"
+                                 value="15" name="prosedur[]">
+                        </td>
+                        <td class="text-center">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%"></td>
+                        <td style="width: 40%">
+                            - Prosedur
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"
+                                 value="16" name="prosedur[]">
+                        </td>
+                        <td class="text-center">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%"></td>
+                        <td style="width: 40%">
+                            - Lokasi dimana tindakan akan dibuat
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"
+                                 value="17" name="prosedur[]">
+                        </td>
+                        <td class="text-center">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%; vertical-align: text-top">2.</td>
+                        <td style="width: 40%">
+                            Antisipasi kejadian kritis
+                            <br>
+                            <input type="text" name="kritis" id="kritis"
+                                value=""
+                                style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                        </td>
+                        <td class="text-center">
+                        </td>
+                        <td class="text-center">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <table class="tabel_bordered" style="width: 100%">
+                                <tr>
+                                    <td style="text-align: center"><b>KEGIATAN</b></td>
+                                    <td style="text-align: center"><b>PELAKSANA</b></td>
+                                    <td style="text-align: center"><b>TANDA TANGAN</b></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" style="text-align: center"><b><i>TIME OUT</i></b></td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                1. Dokter / Dokter Gigi
+                                            </div>
+                                            <div class="col">
+                                                <input type="text" name="dokter_pelaksana2" id="dokter_pelaksana2"
+                                                    value=""
+                                                    style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                                                <input type="text" name="ttd_dokter2" id="ttd_dokter2" hidden
+                                                    value=""
+                                                    style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                1.
+                                            </div>
+                                            <div class="col" id="box_ttd_dokter2">
+                                                                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                2. Perawat
+                                            </div>
+                                            <div class="col">
+                                                <input type="text" name="perawat2" id="perawat2"
+                                                    value=""
+                                                    style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                                                <input type="text" name="ttd_perawat2" id="ttd_perawat2" hidden
+                                                    value=""
+                                                    style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                2.
+                                            </div>
+                                            <div class="col" id="box_ttd_perawat2">
+                                                                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding-left: 20px;" colspan="4">
+                            <b><u><i>SIGN OUT /</i> Setelah tindakan</u></b>
+                            (pukul <input type="text" class="waktu_24" name="signout" id="signout"
+                                value=""
+                                style="border: hidden; border-bottom: 1px dotted; font-size: 14px;">)
+                            <br>
+                            Diisi oleh dokter dan perawat
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%"></td>
+                        <td style="width: 40%">
+                        </td>
+                        <td style="width: 10%; text-align: center">
+                            <b>YA</b>
+                        </td>
+                        <td style="width: 10%; text-align: center">
+                            <b>TIDAK</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%">1.</td>
+                        <td style="width: 40%">
+                            Melakukan konfirmasi secara verbal
+                        </td>
+                        <td class="text-center">
+                        </td>
+                        <td class="text-center">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%"></td>
+                        <td style="width: 40%">
+                            - Nama prosedur tindakan
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"
+                                 value="18" name="prosedur[]">
+                        </td>
+                        <td class="text-center">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%"></td>
+                        <td style="width: 40%">
+                            - Instrument, kasa dan jarum telah dihitung dengan benar / lengkap
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"
+                                 value="19" name="prosedur[]">
+                        </td>
+                        <td class="text-center">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%"></td>
+                        <td style="width: 40%">
+                            - Apakah ada masalah dengan peralatan selama operasi
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"
+                                 value="20" name="prosedur[]">
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"
+                                 value="21" name="prosedur[]">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%"></td>
+                        <td style="width: 40%">
+                            - Spesimen telah diberi label
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"
+                                 value="22" name="prosedur[]">
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox"
+                                 value="23" name="prosedur[]">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; width: 2%; vertical-align: text-top">2.</td>
+                        <td style="width: 40%">
+                            Dokter dan perawat melakukan review masalah utama, apa yang harus diperhatikan untuk
+                            penyembuhan dan manajemen pasien selanjutnya
+                            <br>
+                            <textarea name="review_masalah" rows="2" id="review_masalah" class="form-control" style="width: 100%;"></textarea>
+                        </td>
+                        <td class="text-center">
+                        </td>
+                        <td class="text-center">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <table class="tabel_bordered" style="width: 100%">
+                                <tr>
+                                    <td style="text-align: center"><b>KEGIATAN</b></td>
+                                    <td style="text-align: center"><b>PELAKSANA</b></td>
+                                    <td style="text-align: center"><b>TANDA TANGAN</b></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" style="text-align: center"><b><i>SIGN OUT</i></b></td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                1. Dokter / Dokter Gigi
+                                            </div>
+                                            <div class="col">
+                                                <input type="text" name="dokter_pelaksana3" id="dokter_pelaksana3"
+                                                    value=""
+                                                    style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                                                <input type="text" name="ttd_dokter3" id="ttd_dokter3" hidden
+                                                    value=""
+                                                    style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                1.
+                                            </div>
+                                            <div class="col" id="box_ttd_dokter3">
+                                                                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                2. Perawat
+                                            </div>
+                                            <div class="col">
+                                                <input type="text" name="perawat3" id="perawat3"
+                                                    value=""
+                                                    style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                                                <input type="text" name="ttd_perawat3" id="ttd_perawat3" hidden
+                                                    value=""
+                                                    style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                2.
+                                            </div>
+                                            <div class="col" id="box_ttd_perawat3">
+                                                                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <div class="row">
+                    <table style="width: 100%">
+                        <tr>
+                            <td style="width: 60%; padding-left: 15px; text-align: center; vertical-align: text-top">
+                                <b>Inventaris Kasa</b>
+                                <table class="tabel_bordered" style="width: 100%">
+                                    <tr>
+                                        <td style="text-align: center">Disiapkan</td>
+                                        <td style="text-align: center">Terpakai</td>
+                                        <td style="text-align: center">Jumlah Akhir</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="number" name="disiapkan1" id="disiapkan1" onkeyup="perhitungan1()"
+                                                value="4"
+                                                style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                                        </td>
+                                        <td>
+                                            <input type="number" name="terpakai1" id="terpakai1" onkeyup="perhitungan1()"
+                                                value="2"
+                                                style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                                        </td>
+                                        <td>
+                                            <input type="number" name="hasil1" id="hasil1" readonly
+                                                value="6"
+                                                style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                                        </td>
+                                    </tr>
+                                </table>
+                                <b>Inventaris Alat</b>
+                                <table class="tabel_bordered" style="width: 100%">
+                                    <tr>
+                                        <td style="text-align: center">Disiapkan</td>
+                                        <td style="text-align: center">Terpakai</td>
+                                        <td style="text-align: center">Jumlah Akhir</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="number" name="disiapkan2" id="disiapkan2" onkeyup="perhitungan2()"
+                                                value="0"
+                                                style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                                        </td>
+                                        <td>
+                                            <input type="number" name="terpakai2" id="terpakai2" onkeyup="perhitungan2()"
+                                                value="0"
+                                                style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                                        </td>
+                                        <td>
+                                            <input type="number" name="hasil2" id="hasil2" readonly
+                                                value="0"
+                                                style="border: hidden; border-bottom: 1px dotted; font-size: 14px; width: 100%">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="width: 40%; text-align: center; vertical-align: text-top">
+                                Jombang, <input type="text" class="tanggal_dmy" name="tanggal_dokumen" id="tanggal_dokumen"
+                                    value="07-01-2025"
+                                    style="border: hidden; border-bottom: 1px dotted; font-size: 14px;">
+                                <div id="box_ttd">
+                                                                            <img style="width: 4cm; height:2.5cm;" onclick="open_modal_verifikasi()"
+                                        src="http://localhost/rsi_jombang/smis-upload/05254086989840cd89bf62777ae061e3_ttd2.png"
+                                        alt="">
+                                        <br>
+                                        <span style="border-bottom:1px dotted;">
+                                            (dr. Eky Indyanty W. L,MMRS, Sp.PK.)<br>
+                                        </span>
+                                                                    </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                                    <div class="col-lg-12 text-center">
+                        <a onclick="window.print()" class="btn btn-dark d-print-none"><i class="fas fa-arrow-down"></i> Print</a>
+                    </div>
+                            </div>
+        </form>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://localhost/rsijombang-lar/public/app-assets/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.7/jquery.autocomplete.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="http://localhost/rsijombang-lar/public/app-assets/js/select2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script>
+    $('.tanggal_dmy').daterangepicker({
+        locale: {
+            format: 'DD-MM-YYYY',
+            cancelLabel: 'Clear'
+        },
+        singleClasses: "",
+        autoUpdateInput: false,
+        singleDatePicker: true,
+        timePicker: false,
+    });
+
+    $('.tanggal_dmy').on('apply.daterangepicker', function (ev, picker) {
+        $(this).val(picker.startDate.format('DD-MM-YYYY'));
+    });
+
+    $('.tanggal_dmy').on('cancel.daterangepicker', function (ev, picker) {
+        $(this).val('');
+    });
+
+    $('.waktu_24').daterangepicker({
+        locale: {
+            format: 'HH:mm',
+            cancelLabel: 'Clear'
+        },
+        singleClasses: "",
+        autoUpdateInput: false,
+        singleDatePicker: true,
+        timePicker: true,
+        timePicker24Hour: true,
+    }).on('show.daterangepicker', function(ev, picker) {
+        picker.container.find(".calendar-table").hide();
+    });
+
+    $('.waktu_24').on('apply.daterangepicker', function (ev, picker) {
+        $(this).val(picker.startDate.format('HH:mm'));
+    });
+
+    $('.waktu_24').on('cancel.daterangepicker', function (ev, picker) {
+        $(this).val('');
+    });
+
+    $('.fulldate').daterangepicker({
+        locale: {
+            format: 'DD-MM-YYYY HH:mm',
+            cancelLabel: 'Clear'
+        },
+        singleClasses: "",
+        autoUpdateInput: false,
+        singleDatePicker: true,
+        timePicker: true,
+        timePicker24Hour: true,
+    });
+
+    $('.fulldate').on('apply.daterangepicker', function (ev, picker) {
+        $(this).val(picker.startDate.format('DD-MM-YYYY HH:mm'));
+    });
+
+    $('.fulldate').on('cancel.daterangepicker', function (ev, picker) {
+        $(this).val('');
+    });
+</script><script>
+    $("#dokter_pelaksana1").autocomplete({
+        serviceUrl: "http://localhost/rsijombang-lar/public/ajax_request/autocomplete_employee", // Kode php untuk prosesing data
+        dataType: "JSON", // Tipe data JSON
+        onSelect: function(suggestion) {
+            $("#dokter_pelaksana1").val(suggestion.nama);
+            $("#ttd_dokter1").val(suggestion.ttd);
+            render_ttd_employee('dokter1', suggestion)
+        }
+    });
+
+    $("#perawat1").autocomplete({
+        serviceUrl: "http://localhost/rsijombang-lar/public/ajax_request/autocomplete_employee", // Kode php untuk prosesing data
+        dataType: "JSON", // Tipe data JSON
+        onSelect: function(suggestion) {
+            $("#perawat1").val(suggestion.nama);
+            $("#ttd_perawat1").val(suggestion.ttd);
+            render_ttd_employee('perawat1', suggestion)
+        }
+    });
+
+    $("#dokter_pelaksana2").autocomplete({
+        serviceUrl: "http://localhost/rsijombang-lar/public/ajax_request/autocomplete_employee", // Kode php untuk prosesing data
+        dataType: "JSON", // Tipe data JSON
+        onSelect: function(suggestion) {
+            $("#dokter_pelaksana2").val(suggestion.nama);
+            $("#ttd_dokter2").val(suggestion.ttd);
+            render_ttd_employee('dokter2', suggestion)
+        }
+    });
+
+    $("#perawat2").autocomplete({
+        serviceUrl: "http://localhost/rsijombang-lar/public/ajax_request/autocomplete_employee", // Kode php untuk prosesing data
+        dataType: "JSON", // Tipe data JSON
+        onSelect: function(suggestion) {
+            $("#perawat2").val(suggestion.nama);
+            $("#ttd_perawat2").val(suggestion.ttd);
+            render_ttd_employee('perawat2', suggestion)
+        }
+    });
+
+    $("#dokter_pelaksana3").autocomplete({
+        serviceUrl: "http://localhost/rsijombang-lar/public/ajax_request/autocomplete_employee", // Kode php untuk prosesing data
+        dataType: "JSON", // Tipe data JSON
+        onSelect: function(suggestion) {
+            $("#dokter_pelaksana3").val(suggestion.nama);
+            $("#ttd_dokter3").val(suggestion.ttd);
+            render_ttd_employee('dokter3', suggestion)
+        }
+    });
+
+    $("#perawat3").autocomplete({
+        serviceUrl: "http://localhost/rsijombang-lar/public/ajax_request/autocomplete_employee", // Kode php untuk prosesing data
+        dataType: "JSON", // Tipe data JSON
+        onSelect: function(suggestion) {
+            $("#perawat3").val(suggestion.nama);
+            $("#ttd_perawat3").val(suggestion.ttd);
+            render_ttd_employee('perawat3', suggestion)
+        }
+    });
+
+    function open_modal_verifikasi() {
+        $('#modal_verifikasi').modal('show');
+    }
+
+    $('#form_verifikasi').submit(function(e) {
+        e.preventDefault();
+        $('[name=password]').val($('#password').val());
+        $('#modal_verifikasi').modal('hide');
+        $('#form_verifikasi')[0].reset();
+        $('#form_dokumen').submit();
+    })
+
+    $('#form_dokumen').submit(function(e) {
+        e.preventDefault();
+
+        toastr.warning('Sedang menyimpan dokumen, harap tunggu...');
+
+        $.ajax({
+            url: "http://localhost/rsijombang-lar/public/e_rekam_medis/detail/save_checklist_keselamatan_operasi",
+            data: $('#form_dokumen').serialize(),
+            method: 'post',
+            success: function(response) {
+                if (!response.status) {
+                    toastr.error(response.message);
+                    return;
+                }
+                toastr.success(response.message);
+                render_ttd(response.employee);
+            }
+        })
+    })
+
+    function render_ttd(employee) {
+        $('#box_ttd').html(
+            `<img onclick="open_modal_verifikasi()" style="width:4cm; height:2.5cm;" src="http://localhost/rsi_jombang/smis-upload/` + (employee ? employee.ttd : '') + `" />` +
+            '<br>' +
+            '<span style="border-bottom:1px dotted;">(' + (employee ? employee.nama : '') + ')<br></span>'
+        );
+    }
+
+    function render_ttd_employee(sts, data) {
+        $('#box_ttd_' + sts).html(
+            `<img style="width:1.5cm; height:1cm;" src="http://localhost/rsi_jombang/smis-upload/` + data.ttd + `" />`
+        );
+    }
+
+    function perhitungan1() {
+        var disiapkan = $('#disiapkan1').val() !== undefined ? parseFloat($('#disiapkan1').val()) : 0;
+        var terpakai = $('#terpakai1').val() !== undefined ? parseFloat($('#terpakai1').val()) : 0;
+        var hasil = disiapkan-terpakai;
+        $('#hasil1').val(hasil);
+    }
+
+    function perhitungan2() {
+        var disiapkan = $('#disiapkan2').val() !== undefined ? parseFloat($('#disiapkan2').val()) : 0;
+        var terpakai = $('#terpakai2').val() !== undefined ? parseFloat($('#terpakai2').val()) : 0;
+        var hasil = disiapkan-terpakai;
+        $('#hasil2').val(hasil);
+    }
+</script>
+
+</html>
