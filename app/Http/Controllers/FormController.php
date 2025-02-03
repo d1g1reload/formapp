@@ -36,4 +36,18 @@ class FormController extends Controller
     {
         return view('form.update.rm045a');
     }
+
+    function formRm049()
+    {
+        return view('form.update.rm049');
+    }
+
+    function formRm049a()
+    {
+        return view('form.update.rm049a');
+    }
+    function formRm049b()
+    {
+        return view('form.update.rm049b');
+    }
 }

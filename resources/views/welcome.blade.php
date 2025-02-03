@@ -87,6 +87,37 @@
                 </a>
 
             </div>
+
+            <div class="col-md-4">
+                <a href="{{ route('form.049') }}" class="nav-link">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>Form 049</h2>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-4">
+                <a href="{{ route('form.049a') }}" class="nav-link">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>Form 049A</h2>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-md-4">
+                <a href="{{ route('form.049b') }}" class="nav-link">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>Form 049B</h2>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
         </div>
     </div>
 
